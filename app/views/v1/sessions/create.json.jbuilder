@@ -7,5 +7,11 @@ json.data do
             :username,
         )
     end
-    json.token token
+    # json.token token,
+    # json.questions questions,
+    # json.languages languages,
+    # json.levels levels,
+    # json.answers answers,
+    # json.takes takes
+    # json.questions
 end

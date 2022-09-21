@@ -42,3 +42,8 @@ Things you may want to cover:
 4. push new project: `git push`
 
 *each new repo will have history of root repo*
+
+
+**Testing API with curl**
+1. signup route testing
+`curl  -d "user[email]=five@one.com" -d "user[password]=1111111" http://localhost:3000/signup`

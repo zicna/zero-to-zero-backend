@@ -18,7 +18,19 @@ class V1::UsersController < ApplicationController
 
         if @user.save
             jwt = WebToken.encode(@user)
-            render :create, locals: {token: jwt}, status: :created
+            questions = Question.all
+            languages = Language.all
+            levels = Level.all
+            answers = Answer.all
+            takes = Take.all
+            render :create, locals: {
+                token: jwt,
+                questions: questions,
+                languages: languages,
+                levels: levels,
+                answers: answers,
+                takes: takes }, status: :created
+                
         else
             render json: { error: 'invalid_credentials' }, status: :unauthorized
         end
