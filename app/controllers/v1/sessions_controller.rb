@@ -5,7 +5,11 @@ class V1::SessionsController < ApplicationController
         #! user&. same as user && user.valid_password?
         if @user&.valid_password?(params[:user][:password])
             jwt = WebToken.encode(@user)
-            render :create, locals: {token: jwt}, status: :created
+            message = "successfully logged in"
+            questions = Question.all
+            languages = Language.all
+            levels = Level.all
+            render :create, locals: {token: jwt, message: message, questions: questions, languages: languages, levels: levels}, status: :created
         else
             render json: { error: 'invalid_credentials' }, status: :unauthorized
         end

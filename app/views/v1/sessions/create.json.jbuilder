@@ -2,16 +2,15 @@ json.data do
     json.user do 
         json.call(
             @user,
-            :id,
             :email,
             :username,
         )
     end
     json.token token
-    # json.questions questions,
-    # json.languages languages,
-    # json.levels levels,
-    # json.answers answers,
+    json.questions questions
+    json.languages languages
+    json.levels levels
+    json.message message
+    # json.answers answers
     # json.takes takes
-    # json.questions
 end
