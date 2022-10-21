@@ -1,3 +1,13 @@
+## Postgresql to sqlite3
+
+
+due to problem with installing `pg` gem switched to `sqlite3` db
+commands: 
+- `rails db:system:change --to=sqlite3`
+- add `gem "sqlite3", "~> 1.1"` to the gemfile
+- run `bundle install`
+
+
 # README
 
 This README would normally document whatever steps are necessary to get the
